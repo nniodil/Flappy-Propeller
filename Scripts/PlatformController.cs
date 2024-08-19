@@ -13,7 +13,6 @@ public class PlatformController : MonoBehaviour
 
     public float speed;
 
-
     void Start()
     {
         //Vector3 of platform position reset
@@ -24,6 +23,7 @@ public class PlatformController : MonoBehaviour
     {
         MovementLoop();
     }
+    
     void MovementLoop()
     {
         if (!gameManager.gameOver)
