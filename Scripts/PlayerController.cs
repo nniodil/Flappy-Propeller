@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
         Movement();
     }
 
+
     void Movement()
     {
         characterController.Move(Vector3.up * velocity.y * Time.deltaTime);
@@ -37,18 +38,15 @@ public class PlayerController : MonoBehaviour
         if (gameManager.gameOver)
         {
             transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, -45);
-
         }
         else
         {
             transform.rotation = Quaternion.identity;
         }
-
         
         //Jump
         if (!gameManager.gameOver)
         {
-
             velocity.y += gravity * Time.deltaTime;
 
             if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0) && canJump)
@@ -68,9 +66,6 @@ public class PlayerController : MonoBehaviour
         else if (gameManager.gameOver) 
         {
             velocity.y = -10;
-        }
-
-         
+        } 
     }
-
 }
