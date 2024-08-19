@@ -23,9 +23,7 @@ public class GameManager : MonoBehaviour
     
 
     void Start()
-    {
-        
-        
+    { 
         gameOver = false;
     }
 
@@ -47,7 +45,6 @@ public class GameManager : MonoBehaviour
                 int index = Random.Range(0, Pipelines.Length);
                 Instantiate(Pipelines[index]);
                 StartCoroutine(SpawnDelay());
-
             }
 
             IEnumerator SpawnDelay()
@@ -55,7 +52,6 @@ public class GameManager : MonoBehaviour
                 yield return new WaitForSeconds(1.5f);
                 canSpawn = true;
             }
-
         }  
     }
 
@@ -74,9 +70,7 @@ public class GameManager : MonoBehaviour
             scorePanel.SetActive(true);
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-
         }
-    
     }
 
 
